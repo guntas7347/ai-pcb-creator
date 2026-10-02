@@ -7,7 +7,7 @@
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
+    "module": "preserve",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -20,15 +20,21 @@
     ],
     "paths": {
       "@/*": ["./*"]
-    }
+    },
+    "types": [
+      "node"
+    ]
   },
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "lib/**/*.ts",
+    "lib/**/*.tsx",
     ".next/types/**/*.ts",
-    ".next/dev/types/**/*.ts",
-    "**/*.mts"
+    ".next/dev/types/**/*.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "src"]
 }
